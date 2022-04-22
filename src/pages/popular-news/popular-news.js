@@ -4,20 +4,24 @@ import { GET_POPULAR_NEWS } from "../../redux/constants";
 import News from "../../components/news/news";
 
 const App = () => {
-  const { popularNews } = useSelector(store => store?.news || {});
-  const { popularNewsError } = useSelector(store => store?.errors || {});
-  const dispatch = useDispatch();
+    const { popularNews } = useSelector(store => store?.news || {});
+    const { popularNewsError } = useSelector(store => store?.errors || {});
+    const { isLoadingData } = useSelector(store => store.loader || {});
+    const dispatch = useDispatch();
 
-  
-  useEffect(() => {
-    dispatch({type: GET_POPULAR_NEWS})
-  }, [dispatch])
+    
+    useEffect(() => {
+        dispatch({type: GET_POPULAR_NEWS})
+    }, [dispatch])
 
-  return(
-    <div>
-      <News news={popularNews} error={popularNewsError} title="Popular News" />
-    </div>
-  );
+    return(
+        <div>
+        {
+            isLoadingData ? <h1>Loading...</h1> :
+            <News news={popularNews} error={popularNewsError} title="Popular News" />
+        }
+        </div>
+    );
 };
 
 export default App;
