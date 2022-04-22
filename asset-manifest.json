@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/redux-saga-app/static/css/main.11f297de.css",
+    "main.js": "/redux-saga-app/static/js/main.b76ae154.js",
+    "index.html": "/redux-saga-app/index.html",
+    "main.11f297de.css.map": "/redux-saga-app/static/css/main.11f297de.css.map",
+    "main.b76ae154.js.map": "/redux-saga-app/static/js/main.b76ae154.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.11f297de.css",
+    "static/js/main.b76ae154.js"
+  ]
+}
