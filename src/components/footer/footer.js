@@ -1,6 +1,6 @@
 const Footer = () => (
   <footer>
-    <h3>Created by webDev</h3>
+    <h3>Created by Nik</h3>
   </footer>
 );
 
